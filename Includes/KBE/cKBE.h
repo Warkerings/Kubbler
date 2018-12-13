@@ -11,6 +11,7 @@
 #include <KBE/logger.h>
 #include <KBE/cShader.h>
 #include <KBE/cTexture.h>
+#include <KBE/cBlock.h>
 #include <stb/stb_image.h>
 
 class KBE{
@@ -26,6 +27,7 @@ private:
     bool mFullScreen;
     cShader mShaders;
     cTexture mTextures;
+    cBlock *mBlock;
 };
 
 #endif//INC_C_ENGINE_H
