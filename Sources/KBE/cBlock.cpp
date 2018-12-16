@@ -16,3 +16,7 @@ cBlock::cBlock() {
 void cBlock::Draw() {
     glDrawArrays(GL_TRIANGLES, 0, 36);
 }
+
+void cBlock::SetType(BLOCK_TYPE Type) {
+    mType = Type;
+}

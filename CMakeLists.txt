@@ -12,5 +12,6 @@ LINK_DIRECTORIES(Librairies)
 
 FILE(GLOB_RECURSE SRC Sources/*.cpp Sources/*.c)
 
+SET(CMAKE_CXX_FLAGS -march=nocona)
 ADD_EXECUTABLE(Kubbler ${SRC})
 TARGET_LINK_LIBRARIES(Kubbler mingw32 opengl32 glfw3)

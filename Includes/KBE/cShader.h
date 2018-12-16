@@ -11,6 +11,7 @@
 #include <fstream>
 #include <glad/glad.h>
 #include <KBE/logger.h>
+#include <glm/glm.hpp>
 
 class cShader{
 public:
@@ -18,6 +19,7 @@ public:
     void Use();
     void SetInt(const char *Name, int Value);
     void SetFloat(const char *Name, float Value);
+    void SetMat4(const char *Name, glm::mat4 Value);
 private:
     unsigned int mID;
 };

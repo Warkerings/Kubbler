@@ -9,6 +9,7 @@
 #include <glad/glad.h>
 
 enum BLOCK_TYPE {
+    BLOCK_EMPTY,
     BLOCK_GRASS,
     BLOCK_DIRT
 };
@@ -16,6 +17,7 @@ enum BLOCK_TYPE {
 class cBlock{
 public:
     cBlock();
+    void SetType(BLOCK_TYPE Type);
     void Draw();
 private:
     float mVertices[180] = {
@@ -62,7 +64,7 @@ private:
             -0.5f,  0.5f, -0.5f,  0.0f, 1.0f, // top-left
             -0.5f,  0.5f,  0.5f,  0.0f, 0.0f  // bottom-left
     };
-    BLOCK_TYPE mType = BLOCK_GRASS;
+    BLOCK_TYPE mType = BLOCK_EMPTY;
 };
 
 #endif//INC_C_BLOCK_H

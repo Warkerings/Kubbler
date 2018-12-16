@@ -92,3 +92,7 @@ void cShader::SetInt(const char *Name, int Value) {
 void cShader::SetFloat(const char *Name, float Value) {
     glUniform1f(glGetUniformLocation(mID, Name), Value);
 }
+
+void cShader::SetMat4(const char *Name, glm::mat4 Mat) {
+    glUniformMatrix4fv(glGetUniformLocation(mID, Name), 1, GL_FALSE, &Mat[0][0]);
+}
